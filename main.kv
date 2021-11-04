@@ -1,0 +1,115 @@
+<StartingPage>:
+    name: "starting"
+    FloatLayout:
+        Label:
+            text: "N"
+            font_style: "H1"
+            pos_hint: {"x":0.3, "top":0.9}
+            size_hint: 0.35, 0.15
+        Label:
+            text: "Welcome to Nutricio"
+            pos_hint: {"x": 0.29 , "y":0.7}
+            size_hint: 0.4, 0.15
+        Label:
+            text: "\"Better Health For Better Future\""
+            pos_hint: {"x":0.31, "y":0.6}
+            size_hint: 0.35, 0.24
+        Button:
+            pos_hint:{"x":0.34,"y":0.5}
+            size_hint: 0.3, 0.05
+            text: "Get Started!"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.start()
+
+<LoginPage>:
+    name: "login"
+    username: username
+    password: password
+
+    FloatLayout:
+        TextInput:
+            id:username
+            multiline: False
+            pos_hint: {"x":0.15, "top":0.9}
+            size_hint: 0.7, 0.06
+        TextInput:
+            id:password
+            multiline: False
+            pos_hint: {"x":0.15, "top":0.75}
+            size_hint: 0.7, 0.06
+        Button:
+            pos_hint:{"x":0.35,"y":0.4}
+            size_hint: 0.3, 0.05
+            text: "Sign in"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.loginBtn()
+        Button:
+            pos_hint:{"x":0.3,"y":0.5}
+            size_hint: 0.4, 0.05
+            text: "Don\'t have an account? Register Now!"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.createBtn()
+
+<SignUpPage>:
+    name: "signup"
+    firstname: firstname
+    lastname: lastname
+    dateofbirth: dateofbirth
+    weight: weight
+    tall: tall
+    email: email
+    password: password
+
+    FloatLayout:
+        TextInput:
+            size_hint: 0.7, 0.06
+            pos_hint: {"x":0.1, "top":0.9}
+            id: firstname
+            multiline: False
+        TextInput:
+            size_hint: 0.7, 0.06
+            pos_hint: {"x":0.1, "top":0.8}
+            id: lastname
+            multiline: False
+        TextInput:
+            pos_hint: {"x":0.1, "top":0.7}
+            size_hint: 0.7, 0.06
+            id: dateofbirth
+            multiline: False
+        TextInput:
+            size_hint: 0.32, 0.06
+            pos_hint: {"x":0.1, "top":0.85-0.13*2}
+            id: weight
+            multiline: False
+        TextInput:
+            pos_hint: {"x":0.48, "top":0.85-0.13*2}
+            size_hint: 0.32, 0.06
+            id: tall
+            multiline: False
+        TextInput:
+            size_hint: 0.7, 0.06
+            pos_hint: {"x":0.1, "top":0.5}
+            id: email
+            multiline: False
+        TextInput:
+            pos_hint: {"x":0.1, "top":0.4}
+            size_hint: 0.7, 0.06
+            id: password
+            multiline: False
+        Button:
+            pos_hint:{"x":0.2,"y":0.2}
+            size_hint: 0.5, 0.06
+            text: "Already have an account? Log in now!"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+        Button:
+            pos_hint:{"x":0.3,"y":0.12}
+            size_hint: 0.3, 0.05
+            text: "Submit"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.submit()
