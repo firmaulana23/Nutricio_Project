@@ -11,3 +11,5 @@ Fungsi dari Neural Network diantaranya adalah:
 4. Memetakan pola-pola yang sejenis
 5. Pengoptimasi permasalahan
 6. Prediksi
+
+Video Penjelasan : https://youtu.be/htxQ7V86Zpo
