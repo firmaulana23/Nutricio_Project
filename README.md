@@ -12,4 +12,6 @@ Fungsi dari Neural Network diantaranya adalah:
 5. Pengoptimasi permasalahan
 6. Prediksi
 
+Saat ini aplikasi sudah berhasil dibuat, untuk dokumentasi foto terdapat pada folder screenshot
+
 Video Penjelasan : https://youtu.be/htxQ7V86Zpo
